@@ -8,4 +8,6 @@ class Ping(BotPlugin):
         """ this command responds 'pong' """
         self.send(msg.frm,
                   'pong',
-                  message_type=msg.type)
+                  message_type=msg.type,
+                  in_reply_to=msg,
+                  groupchat_nick_reply=True)
