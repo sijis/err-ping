@@ -2,5 +2,8 @@
 Name = Ping
 Module = ping
 
+[Python]
+Version = 2+
+
 [Documentation]
 Description = This plugin to is to determine if bot is alive
