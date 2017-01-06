@@ -1,11 +1,12 @@
 import ping
-from errbot.backends.test import testbot, push_message, pop_message
-from errbot import plugin_manager
+
+pytest_plugins = ["errbot.backends.test"]
+extra_plugin_dir = '.'
 
 
 class TestPing(object):
     extra_plugin_dir = '.'
 
     def test_ping(self, testbot):
-        push_message('!ping')
-        assert 'pong' in pop_message()
+        testbot.push_message('!ping')
+        assert 'pong' in testbot.pop_message()
